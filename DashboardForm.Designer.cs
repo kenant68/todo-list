@@ -35,6 +35,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtTask = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDisconnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -69,27 +70,29 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(415, 86);
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAdd.Location = new System.Drawing.Point(341, 71);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(512, 86);
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Location = new System.Drawing.Point(447, 71);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Supprimer";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtTask
             // 
-            this.txtTask.Location = new System.Drawing.Point(415, 38);
+            this.txtTask.Location = new System.Drawing.Point(422, 23);
             this.txtTask.Name = "txtTask";
             this.txtTask.Size = new System.Drawing.Size(100, 20);
             this.txtTask.TabIndex = 5;
@@ -97,17 +100,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(324, 41);
+            this.label1.Location = new System.Drawing.Point(331, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nom de la tâche";
+            // 
+            // btnDisconnect
+            // 
+            this.btnDisconnect.BackColor = System.Drawing.Color.Yellow;
+            this.btnDisconnect.Location = new System.Drawing.Point(58, 103);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(86, 23);
+            this.btnDisconnect.TabIndex = 7;
+            this.btnDisconnect.Text = "Déconnexion";
+            this.btnDisconnect.UseVisualStyleBackColor = false;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
             // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 414);
+            this.Controls.Add(this.btnDisconnect);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTask);
             this.Controls.Add(this.btnDelete);
@@ -132,5 +147,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtTask;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDisconnect;
     }
 }

@@ -159,5 +159,10 @@ namespace PROJET_2
             listTasks.ItemCheck += new ItemCheckEventHandler(listTasks_ItemCheck);
 
         }
+
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
