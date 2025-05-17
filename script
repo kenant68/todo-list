@@ -1,0 +1,77 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1:3306
+-- Généré le : sam. 17 mai 2025 à 13:43
+-- Version du serveur : 8.3.0
+-- Version de PHP : 8.2.18
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données : `todo-list`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tasks`
+--
+
+DROP TABLE IF EXISTS `tasks`;
+CREATE TABLE IF NOT EXISTS `tasks` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `UserId` int NOT NULL,
+  `Description` text NOT NULL,
+  `IsCompleted` tinyint(1) DEFAULT '0',
+  `CreatedAt` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`),
+  KEY `UserId` (`UserId`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `tasks`
+--
+
+INSERT INTO `tasks` (`Id`, `UserId`, `Description`, `IsCompleted`, `CreatedAt`) VALUES
+(4, 1, 'Manger', 1, '2025-05-17 11:20:35'),
+(2, 1, 'Aller au sport', 0, '2025-05-14 17:08:30'),
+(5, 4, 'Acheter du pain', 0, '2025-05-17 11:21:12');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `PasswordHash` varchar(256) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`Id`, `Name`, `Email`, `PasswordHash`) VALUES
+(1, 'test', 'test@gmail.com', '07480fb9e85b9396af06f006cf1c95024af2531c65fb505cfbd0add1e2f31573'),
+(2, 'Sapmaz', 'ceyhuns2004@gmail.com', '8bc959e1e29bf58e157a8fed39ce366bdfa04240ae80ba370a7ec771b86a39c5'),
+(4, 'Tekbas', 'tekbask8@gmail.com', '719346283de9cc3e56cc1e54284c521ea6bf3e5e45d1be8f559d1170e96dcc54');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
