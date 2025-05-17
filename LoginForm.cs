@@ -54,7 +54,7 @@ namespace PROJET_2
             }
 
             
-            string connStr = "server=localhost;user id=root;database=connexion_utilisateur;";
+            string connStr = "server=localhost;user id=root;database=todo-list;";
 
 
             try

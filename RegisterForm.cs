@@ -56,7 +56,7 @@ namespace PROJET_2
 
             string passwordHash = HashPassword(password);
 
-            string connStr = "server=localhost;user id=root;database=connexion_utilisateur;";
+            string connStr = "server=localhost;user id=root;database=todo-list;";
             using (var conn = new MySqlConnection(connStr))
             {
                 conn.Open();

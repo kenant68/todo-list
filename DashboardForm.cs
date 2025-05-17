@@ -46,7 +46,7 @@ namespace PROJET_2
         {
             listTasks.Items.Clear();
 
-            string connStr = "server=localhost;user=root;password=;database=connexion_utilisateur;port=3306;";
+            string connStr = "server=localhost;user=root;password=;database=todo-list;port=3306;";
             using (var conn = new MySqlConnection(connStr))
             {
                 conn.Open();
@@ -83,7 +83,7 @@ namespace PROJET_2
                 return;
             }
 
-            string connStr = "server=localhost;user=root;password=;database=connexion_utilisateur;port=3306;";
+            string connStr = "server=localhost;user=root;password=;database=todo-list;port=3306;";
             using (var conn = new MySqlConnection(connStr))
             {
                 conn.Open();
@@ -107,7 +107,7 @@ namespace PROJET_2
             {
                 int taskId = (int)item.Tag;
 
-                string connStr = "server=localhost;user=root;password=;database=connexion_utilisateur;port=3306;";
+                string connStr = "server=localhost;user=root;password=;database=todo-list;port=3306;";
                 using (var conn = new MySqlConnection(connStr))
                 {
                     conn.Open();
@@ -133,7 +133,7 @@ namespace PROJET_2
                 int taskId = (int)item.Tag;
                 bool isCompleted = (e.NewValue == CheckState.Checked);
 
-                string connStr = "server=localhost;user=root;password=;database=connexion_utilisateur;port=3306;";
+                string connStr = "server=localhost;user=root;password=;database=todo-list;port=3306;";
                 using (var conn = new MySqlConnection(connStr))
                 {
                     conn.Open();
