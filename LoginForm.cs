@@ -18,6 +18,7 @@ namespace PROJET_2
         public LoginForm()
         {
             InitializeComponent();
+            this.FormClosed += (s, e) => Application.Exit();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

@@ -20,6 +20,7 @@ namespace PROJET_2
         public DashboardForm(int userId, string userName)
         {
             InitializeComponent();
+            this.FormClosed += (s, e) => Application.Exit();
             this.Load += Dashboard_Load;
             listTasks.ItemCheck += new ItemCheckEventHandler(listTasks_ItemCheck);
             listTasks.ItemCheck += new ItemCheckEventHandler(listTasks_ItemCheck);

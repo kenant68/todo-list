@@ -93,7 +93,7 @@ namespace PROJET_2
                     int userId = Convert.ToInt32(getIdCmd.ExecuteScalar());
 
                     MessageBox.Show("Inscription réussie !");
-                    var dashboard = new DashboardForm(userId, name); // 👈 deux paramètres
+                    var dashboard = new DashboardForm(userId, name); 
                     dashboard.Show();
                     this.Hide();
                 }
